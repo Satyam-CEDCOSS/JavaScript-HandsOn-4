@@ -132,4 +132,116 @@ for( let i=0; i < myArr.length ; i++){
 }
 console.log(total)
 
-// 11 
+// 11 Nesting For Loops
+function multiplyAll(arr) {
+    let product = 1;
+    for (let i = 0; i < arr.length; i++) {
+      for (let j = 0; j < arr[i].length; j++) {
+        product*=arr[i][j]
+    }
+  }
+    return product;
+  }
+  multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+
+// 12 Iterate with JavaScript Do...While Loops
+const myArray = [];
+let i = 10;
+// Only change code below this line
+do{
+  myArray.push(i);
+  i++;
+}while (i < 5) 
+
+// 13 Replace Loops using Recursion
+function sum(arr, n) {
+    if(n <= 0) {
+      return 0;
+    } else {
+      return sum(arr, n - 1) + arr[n - 1];
+    }
+  }
+// 14 Profile Lookup
+// Setup
+const contacts = [
+    {
+      firstName: "Akira",
+      lastName: "Laine",
+      number: "0543236543",
+      likes: ["Pizza", "Coding", "Brownie Points"],
+    },
+    {
+      firstName: "Harry",
+      lastName: "Potter",
+      number: "0994372684",
+      likes: ["Hogwarts", "Magic", "Hagrid"],
+    },
+    {
+      firstName: "Sherlock",
+      lastName: "Holmes",
+      number: "0487345643",
+      likes: ["Intriguing Cases", "Violin"],
+    },
+    {
+      firstName: "Kristian",
+      lastName: "Vos",
+      number: "unknown",
+      likes: ["JavaScript", "Gaming", "Foxes"],
+    },
+  ];
+  function lookUpProfile(name, prop) {
+    for (let x = 0; x < contacts.length; x++) {
+      if (contacts[x].firstName === name) {
+        if (contacts[x].hasOwnProperty(prop)) {
+          return contacts[x][prop];
+        } else {
+          return "No such property";
+        }
+      }
+    }
+    return "No such contact";
+  }
+  lookUpProfile("Akira", "likes");
+
+// 15 Generate Random Fractions with JavaScript
+function randomFraction() {
+    // Only change code below this line
+    let ran = Math.random()
+    return ran;
+    // Only change code above this line
+  }
+
+// 16 Generate Random Whole Numbers with JavaScript
+function randomWholeNum() {
+    // Only change code below this line
+    return Math.floor(Math.random() * 10);;
+}
+
+// 17 Generate Random Whole Numbers within a Range
+function randomRange(myMin, myMax) {
+    // Only change code below this line
+    return Math.floor(Math.random() * (myMax - myMin + 1)) + myMin;
+    // Only change code above this line
+  }
+
+// 18 Use the parseInt Function
+function convertToInteger(str) {
+    const a = parseInt(str);
+    return a;
+    }
+    convertToInteger("56");
+
+// 19 Use the parseInt Function with a Radix
+function convertToInteger(str) {
+    const a = parseInt(str, 2);
+    return a
+    }
+    convertToInteger("10011");
+
+// 20 Use the Conditional (Ternary) Operator
+function checkEqual(a, b) {
+    return a==b ?"Equal" :"Not Equal"
+  }
+  checkEqual(1, 2)
+
+//21
